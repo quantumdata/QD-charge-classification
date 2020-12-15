@@ -4,9 +4,10 @@ We provide the datasets on which small feed-forward neural networks are trained 
 
 ## Data structure
 The synthetic training data and the experimental test data are stored in separate folders. Each folder contains subolders with data for various patch sizes of <img src="https://render.githubusercontent.com/render/math?math=L\times L"> pixels, named ```patch_{L}_{L}```.
-The training dataset consists of 80,000 files, the test dataset consists of 2700 files. The data is provided in the ```Data``` folder, together with the ground truth in ```Truth```.
-The files are numbered and the data files contain NumPy arrays of size <img src="https://render.githubusercontent.com/render/math?math=L\times L"> corresponding to the binary values of each pixel in the patch. The truth files contain a single number which is 0 if no transition line is present in the patch and 1 otherwise.
-All files can be loaded in Python via ```numpy.load('{N}.txt')```, with file number N.
+The training dataset consists of 80,000 and the test dataset of 2700 patches, all come together with ground truth data. The data is provided in ```data.txt```, and the ground truth in ```truth.txt```.
+The data files contain NumPy arrays of size <img src="https://render.githubusercontent.com/render/math?math=80000\times L\times L"> for the training data and of size <img src="https://render.githubusercontent.com/render/math?math=2700\times L\times L"> for the test data. The first dimension counts the individual patches in the dataset, while the second and third dimension index the pixels in the patch, providing a binary value for each pixel. The corresponding truth files are
+one-dimensional arrays of size <img src="https://render.githubusercontent.com/render/math?math=80000"> or <img src="https://render.githubusercontent.com/render/math?math=2700">, respectively, and contain a single number per patch which is 0 if no transition line is present and 1 otherwise.
+All files can be loaded in Python via ```nump.load('data.txt')``` and analogously for the truth files.
 
 ## References
 <a id="1">[1]</a>
