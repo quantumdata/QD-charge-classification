@@ -11,4 +11,4 @@ All files can be loaded in Python via ```nump.load('data.txt')``` and analogousl
 ## References
 <a id="1">[1]</a>
 Czischek et al. (2020)
-arXiv.....
+arXiv:2101.03181[cond-mat.mes-hall]
